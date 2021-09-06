@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+        // 문자열 데이터를 줄을 바꾸면 오류가 발생하지만 \와 함꼐 코드를 작성하면
+        // 문자열의 줄을 바꾸어도 오류가 발생하지 않음.
+        var site = prompt("네이버, 다음, 네이트, 구글 중 \
+즐겨 사용하는 포털 검색 사이트는?", "");
+        var url;
+
+        switch(site) {
+            case "구글" : url = "www.google.com";
+            break;
+            case "다음" : url = "www.daum.net";
+            break;
+            case "네이버" : url = "www.naver.com";
+            break;
+            case "네이트" : url = "www.nate.com";
+            break;
+            default : alert("보기중에 없는 사이트입니다.");
+        }
+
+        // url에 저장된 주소로 이동하기
+        // location.href() : 현재 창 주소 이동 메소드
+        if(url) location.href = "http://" + url; 
+    </script>
+    
+</body>
+</html>
